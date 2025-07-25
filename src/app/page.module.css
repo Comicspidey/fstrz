@@ -1,3 +1,72 @@
 .page {
-  
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background-color: var(--primary-color);
+}
+
+/* FILTERS */
+.filters {
+  margin: 24px;
+  text-align: center;
+}
+
+/* FEEDS */
+
+.feedsWrapper {
+  margin: 24px;
+}
+
+.feeds {
+  background-color: white;
+  font-size: 14px;
+  list-style: none;
+  padding: 0;
+}
+
+.feedItem {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 120px;
+  justify-content: space-between;
+  padding: 16px 20px;
+}
+
+.feedItem:not(:last-child) {
+  border-bottom: 1px solid grey
+}
+
+.feedsStatus {
+  justify-self: flex-end;
+}
+
+.feedTag {
+  text-align: right;
+}
+
+
+.feedSubject,
+.feedName,
+.feedDescription,
+.feedDate {
+  margin: 0;
+}
+
+.feedSubject,
+.feedName {
+  color: var(--primary-color);
+  line-height: 20px;
+}
+
+.feedDescription,
+.feedDate {
+  color: #707575;
+  line-height: 16px;
+}
+
+.feedDate {
+  font-size: 12px;
 }
