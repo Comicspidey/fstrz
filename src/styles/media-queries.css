@@ -1,0 +1,24 @@
+/*
+  ToDo
+  Installer le plugin PostCSS et mettre en place les règles de media queries 
+*/ 
+
+/* 
+
+Dans postcss.config.mjs :
+  module.exports = {
+    plugins: [
+      require('postcss-custom-media'),
+    ],
+  }; 
+
+*/
+
+
+/*
+
+@custom-media --mobile-only (max-width: 899.98px);
+@custom-media --small-mobile (max-width: 600px);
+@custom-media --desktop (min-width: 900px); 
+
+*/

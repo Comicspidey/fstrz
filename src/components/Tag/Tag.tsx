@@ -1,5 +1,5 @@
 import React from 'react';
-import clsx from 'clsx';
+import cn from 'clsx';
 import styles from "./tag.module.css";
 
 type TagProps = {
@@ -15,7 +15,7 @@ const Tag: React.FC<TagProps> = ({
 }) => {
   return (
     <span
-      className={clsx(
+      className={cn(
         styles.tag,
         styles[`tag--${variant}`],
         className

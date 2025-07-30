@@ -10,63 +10,102 @@
 
 /* FILTERS */
 .filters {
-  margin: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: var(--font-size-base);
+  gap: var(--space-16);
+  justify-content: space-between;
+  margin: var(--space-24);
   text-align: center;
 }
 
-/* FEEDS */
-
-.feedsWrapper {
-  margin: 24px;
+.filters__wrapper {
+  display: flex;
+  gap: var(--space-16);
 }
 
-.feeds {
-  background-color: white;
-  font-size: 14px;
+.filters__input {
+  max-width: 300px;
+  width: 100%;
+}
+
+/* activityFeed */
+
+.activityFeed {
+  margin: var(--space-24);
+}
+
+.activityFeed__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-16);
+}
+
+.activityFeed__headerWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+.activityFeed__activeFilters {
+  display: flex;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.activityFeedList {
+  font-size: var(--font-size-base);
   list-style: none;
+  margin: 0;
   padding: 0;
 }
 
-.feedItem {
+.activityFeedList__item {
+  background-color: var(--color-white);
   align-items: center;
   display: grid;
   grid-template-columns: 1fr 1fr 120px;
   justify-content: space-between;
-  padding: 16px 20px;
+  padding: var(--space-16) var(--space-20);
 }
 
-.feedItem:not(:last-child) {
-  border-bottom: 1px solid grey
+.activityFeedList__item:not(:last-child) {
+  border-bottom: 1px solid var(--input-border-color);
 }
 
-.feedsStatus {
-  justify-self: flex-end;
-}
-
-.feedTag {
+.activityFeedList__tag {
   text-align: right;
 }
 
 
-.feedSubject,
-.feedName,
-.feedDescription,
-.feedDate {
+.activityFeedList__subject,
+.activityFeedList__name,
+.activityFeedList__description,
+.activityFeedList__date {
   margin: 0;
 }
 
-.feedSubject,
-.feedName {
+.activityFeedList__subject,
+.activityFeedList__name {
   color: var(--primary-color);
-  line-height: 20px;
+  line-height: 1.25rem;
 }
 
-.feedDescription,
-.feedDate {
-  color: #707575;
-  line-height: 16px;
+.activityFeedList__description,
+.activityFeedList__date {
+  color: var(--input-text-color);
+  line-height: 1rem;
 }
 
-.feedDate {
-  font-size: 12px;
+.activityFeedList__date {
+  font-size: var(--font-size-small);
+}
+
+.activityFeedList__noResults {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  margin-top: 130px;
 }

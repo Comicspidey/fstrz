@@ -1,0 +1,30 @@
+.combobox__button {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  min-width: 200px;
+  min-height: var(--input-height);
+}
+
+.combobox__buttonIcon {
+  margin-left: 0.5rem;
+  opacity: 0.5;
+}
+
+.combobox__content {
+  padding: 0;
+  width: 200px;
+}
+
+.combobox__checkIcon {
+  margin-right: 0.5rem;
+}
+
+.combobox__checkIcon--hidden {
+  opacity: 0;
+}
+
+.combobox__checkIcon--visible {
+  opacity: 1;
+}

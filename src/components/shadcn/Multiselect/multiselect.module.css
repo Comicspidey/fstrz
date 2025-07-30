@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.button {
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: space-between;
+  min-width: 200px;
+  width: 100%;
+  min-height: var(--input-height);
+}
+
+.chevron {
+  flex-shrink: 0;
+  height: 1rem;
+  margin-left: 0.5rem;
+  opacity: 0.5;
+  width: 1rem;
+}
+
+.popoverContent {
+  padding: 0;
+  width: 100%;
+}
+
+.checkbox {
+  align-items: center;
+  border: 1px solid var(--input-text-color-placeholder);
+  border-radius: 0.25rem;
+  display: flex;
+  height: 1rem;
+  justify-content: center;
+  margin-right: 0.5rem;
+  width: 1rem;
+}
+
+.checked {
+  color: var(--color-white);
+  background-color: var(--input-background-color-active);
+  border-color: var(--input-background-color-active);
+}
+
+.checkIcon {
+  height: 1rem;
+  width: 1rem;
+}

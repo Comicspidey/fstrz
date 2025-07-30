@@ -1,0 +1,52 @@
+.popover__content {
+  animation-duration: 200ms;
+  animation-fill-mode: both;
+  background-color: var(--input-background-color);
+  border: 1px solid var(--input-border-color);
+  border-radius: var(--input-border-radius);
+  color: var(--input-text-color);
+  outline: none;
+  z-index: 50;
+  max-width: 200px;
+}
+
+[data-state="open"].popover__content    {  animation-name: fadeIn, zoomIn;   }
+[data-state="closed"].popover__content  {  animation-name: fadeOut, zoomOut; }
+
+[data-side="top"].popover__content      { animation-name: slideInFromBottom; }
+[data-side="bottom"].popover__content   { animation-name: slideInFromTop;    }
+[data-side="left"].popover__content     { animation-name: slideInFromRight;  }
+[data-side="right"].popover__content    { animation-name: slideInFromLeft;   }
+
+@keyframes fadeIn { 
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+@keyframes fadeOut {
+  from { opacity: 1 }
+  to { opacity: 0 }
+}
+@keyframes zoomIn {
+  from { transform: scale(0.95) }
+  to { transform: scale(1) }
+}
+@keyframes zoomOut {
+  from { transform: scale(1) }
+  to { transform: scale(0.95) }
+}
+@keyframes slideInFromTop {
+  from { transform: translateY(-0.5rem) }
+  to { transform: translateY(0) }
+}
+@keyframes slideInFromBottom {
+  from { transform: translateY(0.5rem) }
+  to { transform: translateY(0) }
+}
+@keyframes slideInFromLeft {
+  from { transform: translateX(-0.5rem) }
+  to { transform: translateX(0) }
+}
+@keyframes slideInFromRight {
+  from { transform: translateX(0.5rem) }
+  to { transform: translateX(0) }
+}

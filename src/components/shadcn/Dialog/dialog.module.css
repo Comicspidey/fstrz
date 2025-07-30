@@ -1,0 +1,110 @@
+.dialog__overlay {
+  animation: fadeIn 200ms ease-in-out;
+  background-color: rgba(0, 0, 0, 0.5);
+  inset: 0;
+  position: fixed;
+  z-index: 50;
+}
+
+[data-state="closed"].dialog__overlay {
+  animation: fadeOut 200ms ease-in-out;
+}
+
+.dialog__content {
+  animation: fadeIn 200ms ease, zoomIn 200ms ease;
+  border: 1px solid var(--input-border-color);
+  border-radius: 0.5rem;
+  display: grid;
+  gap: 1rem;
+  left: 50%;
+  max-width: 32rem; 
+  padding: 1.5rem;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 50;
+}
+
+[data-state="closed"].dialog__content {
+  animation: fadeOut 200ms ease, zoomOut 200ms ease;
+}
+
+.dialog__closeButton {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 0.25rem;
+  display: inline-flex;
+  justify-content: center;
+  opacity: 0.7;
+  outline: none;
+  padding: 0;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+.dialog__closeButton svg {
+  height: 1rem;
+  pointer-events: none;
+  width: 1rem;
+}
+
+.dialog__closeButton:hover {
+  opacity: 1;
+}
+
+.dialog__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.dialog__footer {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.5rem;
+}
+
+.dialog__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+}
+
+.dialog__description {
+  color: oklch(0.556 0 0);
+  font-size: var(--font-size-base);
+}
+
+@media (min-width: 640px) {
+  .dialog__header {
+    text-align: left;
+  }
+
+  .dialog__footer {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+@keyframes fadeOut {
+  from { opacity: 1 }
+  to { opacity: 0 }
+}
+@keyframes zoomIn {
+  from { transform: translate(-50%, -50%) scale(0.95) }
+  to { transform: translate(-50%, -50%) scale(1) }
+}
+@keyframes zoomOut {
+  from { transform: translate(-50%, -50%) scale(1) }
+  to { transform: translate(-50%, -50%) scale(0.95) }
+}

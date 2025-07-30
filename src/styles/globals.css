@@ -1,13 +1,28 @@
 @import '../../node_modules/modern-normalize/modern-normalize.css';
-@import './shadcn.css';
+@import './font.css';
+@import './spacer.css';
+@import './media-queries.css';
 
 :root {
+  --border-radius-rounded: 1.875rem;
+  /* colors */
+  --color-black: #212121;
+  --color-white: #ffffff;
   --primary-color: #033752;
   --secondary-color: #74D4D7;
   --background-color: #F9F9FB;
-  --success-color: green;
-  --warning-color: orange;
-  --error-color: red;
+  --success-color: #2E7D32;
+  --warning-color: #FFA322;
+  --error-color: #E42525;
+  /* input */
+  --input-background-color: #ffffff;
+  --input-background-color-active: #303c52;
+  --input-background-color-hover: #707575;
+  --input-border-color: #cbd5e1;
+  --input-text-color: #707575;
+  --input-text-color-placeholder: #a1a8a8;
+  --input-border-radius: 0.75rem;
+  --input-height: 3rem;
 }
 
 html,
@@ -22,4 +37,16 @@ body {
   font-family: var(--font-poppins);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
 }

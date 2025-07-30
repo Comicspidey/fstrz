@@ -1,42 +1,42 @@
 .header {
   align-items: center;
-  background-color: white;
+  background-color: var(--color-white);
   display: flex;
-  gap: 16px;
+  gap: var(--space-16);
   justify-content: space-between;
   min-height: 80px;
-  padding: 0 24px;
+  padding: 0 var(--space-24);
 }
 
 /* Breadcrumb */
 
 .breadcrumb {
-  border-left: 4px solid var(--primary-color);
-  padding-left: 8px;
+  border-left: var(--space-4) solid var(--primary-color);
+  padding-left: var(--space-8);
 }
 
 .breadcrumbTitleWrapper {
   align-items: center;
   display: flex;
-  gap: 12px;
+  gap: var(--space-12);
 }
 
 .breadcrumbTitle {
-  font-size: 18px;
+  font-size: 1.125rem;
   margin: 0;
 }
 
 .breadcrumbLabel {
-  border-radius: 4px;
-  color: white;
-  font-size: 12px;
+  border-radius: 0.25rem;
+  color: var(--color-white);
+  font-size: var(--font-size-small);
   overflow: hidden;
 }
 
 .breadcrumbLabel .breadcrumbLabelName,
 .breadcrumbLabel .breadcrumbLabelStatus {
   display: inline-block;
-  padding: 2px 6px;
+  padding: var(--space-2) var(--space-6);
 }
 
 .breadcrumbLabelName {
@@ -50,15 +50,16 @@
 .breadcrumbList {
   display: flex;
   color: grey;
-  font-size: 12px;
+  flex-wrap: wrap;
+  font-size: var(--font-size-small);
   list-style: none;
-  padding: 4px 0 0;
+  padding: var(--space-4) 0 0;
   margin: 0;
 }
 
 .breadcrumbListItem:not(:last-child)::after {
   content: "/";
-  padding: 0 4px;
+  padding: 0 var(--space-4);
 }
 
 .breadcrumbLink {
@@ -74,5 +75,5 @@
 
 .actionGroup {
   display: flex;
-  gap: 8px;
+  gap: var(--space-8);
 }

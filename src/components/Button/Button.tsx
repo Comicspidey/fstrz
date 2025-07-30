@@ -1,5 +1,6 @@
-import React from 'react';
-import clsx from 'clsx';
+import React from "react";
+import cn from "clsx";
+import { X as IconCross } from "lucide-react";
 import styles from "./button.module.css";
 
 type ButtonProps = {
@@ -8,7 +9,7 @@ type ButtonProps = {
   iconLeft?: React.ReactNode;
   iconRight?: React.ReactNode;
   onClick?: () => void;
-  variant?: 'default' | 'ghost';
+  variant?: "default" | "ghost" | "isLink" | "isTag";
 };
 
 export const Button: React.FC<ButtonProps> = ({
@@ -17,20 +18,25 @@ export const Button: React.FC<ButtonProps> = ({
   iconRight,
   label,
   onClick,
-  variant = 'default',
+  variant = "default",
 }) => {
+  const showIconRight = variant === "isTag" ? <IconCross className={styles.button__iconRight} /> : iconRight;
+
   return (
     <button
       onClick={onClick}
-      className={clsx(
+      className={cn(
         styles.button,
-        variant === 'ghost' && styles['button--ghost'],
+        variant === "ghost" && styles["button--ghost"],
+        variant === "isLink" && styles["button--isLink"],
+        variant === "isTag" && styles["button--isTag"],
+        (iconLeft || showIconRight) && styles["button--withIcon"],
         className
       )}
     >
-      {iconLeft && <span className="icon-left">{iconLeft}</span>}
+      {iconLeft && <span className={styles.button__iconLeft}>{iconLeft}</span>}
       {label}
-      {iconRight && <span className="icon-right">{iconRight}</span>}
+      {showIconRight && <span className={styles.button__iconRight}>{showIconRight}</span>}
     </button>
   );
 };
