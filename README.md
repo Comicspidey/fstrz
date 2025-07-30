@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Pour lancer le projet
 
-## Getting Started
+* `npm run dev`
+* Site accessible sur http://localhost:3000
 
-First, run the development server:
+## Figma
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Maquette [Figma](https://www.figma.com/design/xpGDhL3t8bpVvDUhd2a9Pi/Activity-Feed?node-id=104-508&t=qz62FizAvInNJo2z-1)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ToDo 
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+* Ajouter le composant Calendrier dans la search
+* Ajouter l'état "sélectionné" sur le dropdown de la search
+* Remplacer la librairie d'Icon (lucide-react) par des icones issus du Design System
+* Nettoyer les CSS des composants Shadcn restant
+* Améliorer l'accessibilité des composants initialement importés depuis Shadcn
+* Formaliser le nommage des classes CSS
+* Mettre en place des tests sur les composants et sur la search
+* Mettre en place des règles de Breakpoint en fonction de l'utilisation des produits
+* Supprimer Tailwind de package Json et du postcss config
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Amélioration UX/UI
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* Revoir tout le fonctionnement des résultats dans les select : quand afficher les résultats réels en fonction des filtres sélectionner et quand afficher les résultats complets ? 
+* Définir une charte graphique / Design System cohérent : mélange d'arrondi et d'angle droit
+* A l'utilisation des filtres, mettre en place un "fake" loader d'un court instant pour que l'utilisateur comprenne que les résultats ont changé.
+* Si trop de filtres, envisager de les regrouper sous un bouton "+ de filtres" ou jouer tous les filtres dans un panel.
